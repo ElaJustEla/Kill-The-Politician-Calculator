@@ -14,7 +14,7 @@ Download:
 
 You can also use the source code to make some modifications yourself.
 
-Type either of those (or shortcut key, e.g. just press q to quit, f to flush) to quit
+Type either of those (or shortcut key, e.g. just enter q to quit, f to flush) to quit
 
 quit(q)
 
