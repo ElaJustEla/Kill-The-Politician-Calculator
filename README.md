@@ -10,7 +10,7 @@ Demonstration:
 
 Download:
 1. Click [Calculator_CMD.exe](https://github.com/ElaJustEla/Kill-The-Politician-Calculator/blob/main/Calculator_CMD.exe) (31KB)
-2. Top Right [Download raw file] button
+2. Top Right [Download raw file] button (one button across the [Raw] button)
 
 You might encounter SmartScreen flagging this program as an unknown publisher warning, 
 cuz I ain't got a certificate and this program was just made as new as a new born baby.
