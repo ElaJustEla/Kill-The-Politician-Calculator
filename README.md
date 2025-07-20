@@ -5,3 +5,5 @@ Type either of those to quit
 quit
 leave
 exit
+
+Type flush or clear to flush screen
