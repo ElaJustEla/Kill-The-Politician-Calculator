@@ -9,11 +9,18 @@ Demonstration:
 
 
 Download:
-1. Click Calculator_CMD.exe
+1. Click Calculator_CMD.exe (31KB)
 2. Top Right [Download raw file] button
 
-You can also use the source code to make some modifications yourself.
+You might encounter SmartScreen flagging this program as an unknown publisher warning, 
+cuz I ain't got a certificate and this program was just made as new as a new born baby.
+The program is built from Visual Studio, so if you have some OCD of some sorts, paste the source code into a new console app,
+change debug mode to release and build solutions, then it will show the path of the program you've built in the output section.
+GCC and MinGW should work, but I know nothing about them and alternatives.
 
+You can also use the source code to make some modifications yourself, make a GUI or whatever.
+
+Commands (work during any promopts, doesn't need to be at first question):
 Type either of those (or shortcut key, e.g. just enter q to quit, f to flush) to quit
 
 quit(q)
