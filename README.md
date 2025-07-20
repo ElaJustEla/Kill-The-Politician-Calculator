@@ -14,12 +14,12 @@ Download:
 
 You can also use the source code to make some modifications yourself.
 
-Type either of those to quit
+Type either of those (or shortcut key, e.g. just press f to quit) to quit
 
-quit
+quit(q)
 
-leave
+leave(l)
 
-exit
+exit(e)
 
-Type flush or clear to flush screen
+Type flush(f) or clear(f) to flush screen
