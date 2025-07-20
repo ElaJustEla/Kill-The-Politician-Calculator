@@ -22,4 +22,4 @@ leave(l)
 
 exit(e)
 
-Type flush(f) or clear(f) to flush screen
+Type flush(f) or clear(c) to flush screen
