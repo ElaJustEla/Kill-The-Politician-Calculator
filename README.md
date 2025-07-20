@@ -15,8 +15,11 @@ Download:
 You can also use the source code to make some modifications yourself.
 
 Type either of those to quit
+
 quit
+
 leave
+
 exit
 
 Type flush or clear to flush screen
