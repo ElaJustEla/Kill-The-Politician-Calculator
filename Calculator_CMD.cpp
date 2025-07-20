@@ -3,6 +3,7 @@
 #include <sstream>
 #include <algorithm>
 
+// Helper: Check for exit commands
 bool isExitCommand(const std::string& s) {
     std::string input = s;
     std::transform(input.begin(), input.end(), input.begin(), ::tolower);
@@ -10,21 +11,44 @@ bool isExitCommand(const std::string& s) {
             input == "e"    || input == "q"    || input == "l");
 }
 
+// Helper: Check for clear/flush commands
+bool isClearCommand(const std::string& s) {
+    std::string input = s;
+    std::transform(input.begin(), input.end(), input.begin(), ::tolower);
+    return (input == "clear" || input == "flush" || input == "c" || input == "f");
+}
+
+// Clear screen (platform-independent)
+void clearScreen() {
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+}
+
+// Input handler with exit and clear/flush support
 bool getIntOrExit(const std::string& prompt, int& out) {
     std::string input;
-    std::cout << prompt;
-    std::getline(std::cin, input);
+    while (true) {
+        std::cout << prompt;
+        std::getline(std::cin, input);
 
-    // Check for exit commands
-    if (isExitCommand(input)) return false;
+        if (isExitCommand(input)) return false;
 
-    std::stringstream ss(input);
-    ss >> out;
-    if (ss.fail()) {
-        std::cout << "Invalid number, please try again.\n";
-        return getIntOrExit(prompt, out); // retry
+        if (isClearCommand(input)) {
+            clearScreen();
+            continue; // re-prompt after clearing
+        }
+
+        std::stringstream ss(input);
+        ss >> out;
+        if (ss.fail()) {
+            std::cout << "Invalid number, please try again.\n";
+            continue;
+        }
+        return true;
     }
-    return true;
 }
 
 int main() {
@@ -55,7 +79,6 @@ int main() {
             int value = current_value;
             std::string expr = std::to_string(current_value);
 
-            // Build expression with colored output
             for (int i = 0; i < 3; ++i) {
                 if (ops[i] == 0) {
                     value += valve[i];
